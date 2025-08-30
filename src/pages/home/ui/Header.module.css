@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.37em;
+}
+
+.themeSwitch {
+  width: 40px;
+  height: 40px;
+  padding: 7px;
+  margin: -10px;
+  border-radius: 50%;
+  transition: background-color 150ms;
+
+  &:hover {
+    background-color: hsl(from var(--white) h s l / 30%);
+  }
+}
+
+@media (--sm-up) {
+  .title {
+    font-size: 34px;
+  }
+
+  .themeSwitch {
+    margin: -7px;
+  }
+}
+
+@media (--md-up) {
+  .title {
+    font-size: 40px;
+  }
+}

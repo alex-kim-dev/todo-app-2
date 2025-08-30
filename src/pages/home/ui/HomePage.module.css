@@ -1,0 +1,24 @@
+.container {
+  min-block-size: 100dvh;
+  padding-block: 78px;
+  padding-inline: 12px;
+  background: top center / auto 213px no-repeat url('/background-light.jpg');
+}
+
+body[data-theme='dark'] .container {
+  background-image: url('/background-dark.jpg');
+  background-position-x: left;
+}
+
+.content {
+  max-inline-size: 540px;
+  margin-inline: auto;
+}
+
+@media (--lg-up) {
+  .container {
+    padding-inline: 32px;
+    background-position-x: center;
+    background-size: 100% auto;
+  }
+}

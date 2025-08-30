@@ -10,7 +10,7 @@
   --muted: hsl(234deg 39% 85%);
 }
 
-[data-theme='dark'] {
+body[data-theme='dark'] {
   --bg-primary: hsl(235deg 21% 11%);
   --bg-secondary: hsl(235deg 24% 19%);
   --bg-hover: hsl(235deg 21% 11%);

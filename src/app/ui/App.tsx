@@ -1,1 +1,3 @@
-export const App = () => <h1>Todo app 2</h1>
+import { HomePage } from '~/pages/home'
+
+export const App = () => <HomePage />
