@@ -4,12 +4,8 @@ extends:
 
 plugins:
   - stylelint-use-logical-spec
-  - stylelint-browser-compat
 
 rules:
   selector-class-pattern:
     - ^[a-z][a-z0-9]*(?:[A-Z]+[a-z0-9]*)*$ # camelCase
     - resolveNestedSelectors: true
-  plugin/browser-compat:
-    - true
-    - browserslist: ['extends browserslist-config-baseline']

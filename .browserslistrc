@@ -1,1 +1,6 @@
-extends browserslist-config-baseline
+Chrome >= 109
+Edge >= 109
+Safari >= 15.6
+Firefox >= 115
+ChromeAndroid >= 109
+iOS >= 15.6
