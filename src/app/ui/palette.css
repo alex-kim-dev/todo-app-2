@@ -1,0 +1,20 @@
+:root {
+  --accent: hsl(220deg 98% 61%);
+  --gradient: linear-gradient(hsl(192deg 100% 67%), hsl(280deg 87% 65%));
+  --white: hsl(0deg 0% 100%);
+  --bg-primary: hsl(0deg 0% 98%);
+  --bg-secondary: hsl(0deg 0% 100%);
+  --bg-hover: hsl(233deg 11% 84%);
+  --text: hsl(235deg 19% 35%);
+  --text-secondary: hsl(236deg 9% 61%);
+  --muted: hsl(234deg 39% 85%);
+}
+
+[data-theme='dark'] {
+  --bg-primary: hsl(235deg 21% 11%);
+  --bg-secondary: hsl(235deg 24% 19%);
+  --bg-hover: hsl(235deg 21% 11%);
+  --text: hsl(234deg 39% 85%);
+  --text-secondary: hsl(234deg 11% 52%);
+  --muted: hsl(233deg 14% 35%);
+}

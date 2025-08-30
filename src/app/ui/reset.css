@@ -10,7 +10,10 @@ body {
   min-block-size: 100dvh;
   font-family: 'Josefin Sans Variable', sans-serif;
   line-height: normal;
+  color: var(--text);
+  letter-spacing: -0.015em;
   overflow-wrap: anywhere;
+  background-color: var(--bg-primary);
   scroll-behavior: smooth;
 }
 
