@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      '@fontsource-variable/josefin-sans':
+        specifier: ~5.2.6
+        version: 5.2.6
       clsx:
         specifier: ~2.1.1
         version: 2.1.1
@@ -749,6 +752,12 @@ packages:
         integrity: sha512-1+WqvgNMhmlAambTvT3KPtCl/Ibr68VldY2XY40SL1CE0ZXiakFR/cbTspaF5HsnpDMvcYYoJHfl4980NBjGag==,
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
+
+  '@fontsource-variable/josefin-sans@5.2.6':
+    resolution:
+      {
+        integrity: sha512-oqJ9FuwPHa8ukZRDIbcz0+FkplU44L8eJQjNN3DpMcHluz6ZhYT3DvVZCF9QWy/WNWkH0Dcz2hcoyNVpRPniLQ==,
+      }
 
   '@humanfs/core@0.19.1':
     resolution:
@@ -5624,6 +5633,8 @@ snapshots:
     dependencies:
       '@eslint/core': 0.15.1
       levn: 0.4.1
+
+  '@fontsource-variable/josefin-sans@5.2.6': {}
 
   '@humanfs/core@0.19.1': {}
 

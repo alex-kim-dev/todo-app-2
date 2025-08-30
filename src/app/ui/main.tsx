@@ -1,5 +1,6 @@
 import './reset.css'
 
+import '@fontsource-variable/josefin-sans'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
