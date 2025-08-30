@@ -1,0 +1,9 @@
+'*.{j,t}s{,x}':
+  - eslint --fix
+  - vitest related --run --passWithNoTests
+
+'*.css':
+  - stylelint --fix strict
+
+'*.{js,ts,jsx,tsx,css,html,json,yml,yaml,md}':
+  - prettier --write
