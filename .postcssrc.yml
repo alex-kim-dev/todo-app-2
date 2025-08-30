@@ -1,0 +1,5 @@
+plugins:
+  '@csstools/postcss-global-data':
+    files:
+      - src/app/ui/breakpoints.css
+  postcss-preset-env: {}
