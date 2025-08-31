@@ -1,8 +1,9 @@
-import { useDeferredValue, useMemo } from 'react'
+import { useDeferredValue, useEffect, useMemo } from 'react'
 
 import {
   addTodo,
   clearCompletedTodos,
+  ColorTheme,
   deleteTodo,
   setTodoCompletion,
   setTodoFilter,
@@ -18,7 +19,7 @@ import { TodoList } from './TodoList'
 import { Toolbar } from './Toolbar'
 
 export const HomePage = () => {
-  const { todos, filter } = useStore()
+  const { theme, todos, filter } = useStore()
   const dispatch = useDispatch()
 
   const filteredTodos = useMemo(
@@ -32,6 +33,11 @@ export const HomePage = () => {
   )
 
   const deferredTodos = useDeferredValue(filteredTodos)
+
+  useEffect(() => {
+    document.body.setAttribute('data-theme', theme === ColorTheme.Dark ? 'dark' : 'light')
+    return () => document.body.removeAttribute('data-theme')
+  }, [theme])
 
   const handleTodoAdd = (task: string) => {
     dispatch(addTodo(task))

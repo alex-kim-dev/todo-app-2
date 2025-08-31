@@ -1,5 +1,10 @@
 export type ID = string
 
+export enum ColorTheme {
+  Light = 'LIGHT',
+  Dark = 'DARK',
+}
+
 export interface Todo {
   id: ID
   task: string
@@ -13,11 +18,17 @@ export enum TodoFilter {
 }
 
 export enum ActionType {
+  SetColorTheme = 'SET_COLOR_THEME',
   AddTodo = 'ADD_TODO',
   SetTodoCompletion = 'SET_TODO_COMPLETION',
   DeleteTodo = 'DELETE_TODO',
   ClearCompletedTodos = 'CLEAR_COMPLETED_TODOS',
   SetTodoFilter = 'SET_TODO_FILTER',
+}
+
+interface ActionSetColorTheme {
+  type: ActionType.SetColorTheme
+  payload: { theme: ColorTheme }
 }
 
 interface ActionAddTodo {
@@ -45,11 +56,17 @@ interface ActionSetTodoFilter {
 }
 
 export type Action =
+  | ActionSetColorTheme
   | ActionAddTodo
   | ActionSetTodoCompletion
   | ActionDeleteTodo
   | ActionClearCompletedTodos
   | ActionSetTodoFilter
+
+export const setColorTheme = (colorTheme: ColorTheme): ActionSetColorTheme => ({
+  type: ActionType.SetColorTheme,
+  payload: { theme: colorTheme },
+})
 
 export const addTodo = (task: string): ActionAddTodo => ({
   type: ActionType.AddTodo,

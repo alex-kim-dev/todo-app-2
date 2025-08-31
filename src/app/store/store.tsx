@@ -4,14 +4,18 @@ import { produce } from 'immer'
 import { nanoid } from 'nanoid'
 import { createContext, type Dispatch, type ReactNode, use, useEffect, useReducer } from 'react'
 
-import { type Todo, type Action, ActionType, TodoFilter } from './actions'
+import { type Todo, type Action, ActionType, TodoFilter, ColorTheme } from './actions'
 
 interface GlobalStore {
+  theme: ColorTheme
   todos: Todo[]
   filter: TodoFilter
 }
 
 const INITIAL_STATE: GlobalStore = {
+  theme: window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? ColorTheme.Dark
+    : ColorTheme.Light,
   todos: [
     {
       id: nanoid(),
@@ -33,6 +37,11 @@ const INITIAL_STATE: GlobalStore = {
 
 const reducer = produce((state: GlobalStore, action: Action): void => {
   switch (action.type) {
+    case ActionType.SetColorTheme: {
+      state.theme = action.payload.theme
+      break
+    }
+
     case ActionType.AddTodo: {
       const todo: Todo = {
         id: nanoid(),

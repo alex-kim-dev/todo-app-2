@@ -2,7 +2,9 @@ export { useStore, useDispatch, GlobalStore } from './store'
 export {
   type ID,
   type Todo,
+  ColorTheme,
   TodoFilter,
+  setColorTheme,
   addTodo,
   setTodoCompletion,
   deleteTodo,

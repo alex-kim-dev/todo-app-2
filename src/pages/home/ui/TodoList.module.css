@@ -48,7 +48,9 @@
 }
 
 .check {
+  color: var(--bg-secondary);
   translate: 1px 1px;
+  transition: color 120ms;
 }
 
 .checkboxWrapper:hover .checkboxCover {
