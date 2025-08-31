@@ -1,6 +1,7 @@
 import { Header } from './Header'
 import styles from './HomePage.module.css'
 import { NewTodoForm } from './NewTodoForm'
+import { TodoList } from './TodoList'
 
 export const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ export const HomePage = () => {
         <Header />
         <main className={styles.main}>
           <NewTodoForm />
+          <TodoList />
         </main>
       </div>
     </div>
