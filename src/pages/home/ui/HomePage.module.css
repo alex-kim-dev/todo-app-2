@@ -19,6 +19,14 @@ body[data-theme='dark'] .container {
   margin-block-start: 40px;
 }
 
+.listWithFilters {
+  margin-block-start: 24px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  border-radius: 5px;
+  box-shadow: 0 34px 30px hsl(0deg 0% 0% / 10%);
+}
+
 @media (--lg-up) {
   .container {
     background-position-x: center;
