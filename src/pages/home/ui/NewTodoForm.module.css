@@ -12,13 +12,11 @@
 }
 
 .icon {
-  --size: 20px;
-
   display: block;
   grid-area: 1 / 1 / 2 / -1;
-  inline-size: var(--size);
-  block-size: var(--size);
-  margin-inline-start: 20px;
+  inline-size: 24px;
+  block-size: 24px;
+  margin-inline-start: 24px;
   border: 1px solid var(--muted);
   border-radius: 50%;
 }
@@ -26,40 +24,14 @@
 .textField {
   grid-area: 1 / 1 / -1 / -1;
   inline-size: 100%;
-  padding-block: 19px 17px;
-  padding-inline: 52px 20px;
-  font-size: 12px;
+  padding-block: 24px 22px;
+  padding-inline: 72px 24px;
+  font-size: 18px;
   color: var(--text);
   background-color: transparent;
   border: 0;
 
   &::placeholder {
     color: var(--text-secondary);
-  }
-}
-
-@media (--sm-up) {
-  .icon {
-    --size: 24px;
-
-    margin-inline-start: 22px;
-  }
-
-  .textField {
-    padding-block: 20px;
-    padding-inline: 64px 22px;
-    font-size: 16px;
-  }
-}
-
-@media (--md-up) {
-  .icon {
-    margin-inline-start: 24px;
-  }
-
-  .textField {
-    padding-block: 24px 22px;
-    padding-inline: 72px 24px;
-    font-size: 18px;
   }
 }
