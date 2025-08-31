@@ -13,8 +13,8 @@
 }
 
 .themeSwitch {
-  width: 40px;
-  height: 40px;
+  inline-size: 40px;
+  block-size: 40px;
   padding: 7px;
   margin: -10px;
   border-radius: 50%;

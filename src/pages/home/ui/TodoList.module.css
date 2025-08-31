@@ -29,14 +29,14 @@
 
 .checkboxWrapper {
   position: relative;
-  width: 24px;
-  height: 24px;
+  inline-size: 24px;
+  block-size: 24px;
 }
 
 .checkbox {
   display: block;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   appearance: none;
   cursor: pointer;
   background-image: var(--gradient);
