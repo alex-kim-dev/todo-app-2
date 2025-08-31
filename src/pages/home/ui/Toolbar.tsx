@@ -33,7 +33,9 @@ export const Toolbar = ({
 
   return (
     <div role='toolbar' className={styles.toolbar}>
-      <span role='status'>{countText}</span>
+      <span role='status' data-testid='todo-counter'>
+        {countText}
+      </span>
       <div role='radiogroup' aria-label='Filter todos' className={styles.radioGroup}>
         {FILTER_LABELS.map(([filter, label]) => (
           <label key={filter} className={styles.radioLabel}>

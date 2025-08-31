@@ -12,7 +12,7 @@ interface GlobalStore {
   filter: TodoFilter
 }
 
-const INITIAL_STATE: GlobalStore = {
+export const INITIAL_STATE: GlobalStore = {
   theme: window.matchMedia('(prefers-color-scheme: dark)').matches
     ? ColorTheme.Dark
     : ColorTheme.Light,

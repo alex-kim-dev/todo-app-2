@@ -11,8 +11,11 @@ export const NewTodoForm = ({ onTodoAdd }: NewTodoFormProps) => {
     event.preventDefault()
     const form = event.currentTarget
     const task = new FormData(form).get('new-todo') as string
-    onTodoAdd?.(task.trim())
-    form.reset()
+
+    if (task) {
+      onTodoAdd?.(task.trim())
+      form.reset()
+    }
   }
 
   return (

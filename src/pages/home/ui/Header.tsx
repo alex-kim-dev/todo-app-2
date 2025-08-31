@@ -7,10 +7,12 @@ import styles from './Header.module.css'
 export const Header = () => {
   const { theme } = useStore()
   const dispatch = useDispatch()
-  const Icon = theme === ColorTheme.Dark ? SunIcon : MoonIcon
+
+  const isDarkTheme = theme === ColorTheme.Dark
+  const Icon = isDarkTheme ? SunIcon : MoonIcon
 
   const handleThemeSwitchClick = () => {
-    dispatch(setColorTheme(theme === ColorTheme.Dark ? ColorTheme.Light : ColorTheme.Dark))
+    dispatch(setColorTheme(isDarkTheme ? ColorTheme.Light : ColorTheme.Dark))
   }
 
   return (
@@ -20,7 +22,7 @@ export const Header = () => {
         type='button'
         role='switch'
         aria-label='Toggle dark theme'
-        aria-checked={false}
+        aria-checked={isDarkTheme}
         onClick={handleThemeSwitchClick}
         className={styles.themeSwitch}
       >

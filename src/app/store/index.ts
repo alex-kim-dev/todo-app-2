@@ -1,4 +1,4 @@
-export { useStore, useDispatch, GlobalStore } from './store'
+export { INITIAL_STATE, useStore, useDispatch, GlobalStore } from './store'
 export {
   type ID,
   type Todo,
