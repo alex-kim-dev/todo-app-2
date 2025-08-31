@@ -2,12 +2,16 @@ import type { FormEventHandler } from 'react'
 
 import styles from './NewTodoForm.module.css'
 
-export const NewTodoForm = () => {
+interface NewTodoFormProps {
+  onTodoAdd?: (task: string) => void
+}
+
+export const NewTodoForm = ({ onTodoAdd }: NewTodoFormProps) => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault()
     const form = event.currentTarget
     const task = new FormData(form).get('new-todo') as string
-    console.log(task.trim())
+    onTodoAdd?.(task.trim())
     form.reset()
   }
 

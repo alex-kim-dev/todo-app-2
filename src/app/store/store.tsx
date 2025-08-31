@@ -2,15 +2,7 @@
 
 import { produce } from 'immer'
 import { nanoid } from 'nanoid'
-import {
-  createContext,
-  type Dispatch,
-  type FC,
-  type ReactNode,
-  use,
-  useEffect,
-  useReducer,
-} from 'react'
+import { createContext, type Dispatch, type ReactNode, use, useEffect, useReducer } from 'react'
 
 import { type Todo, type Action, ActionType, TodoFilter } from './actions'
 
@@ -32,11 +24,11 @@ const INITIAL_STATE: GlobalStore = {
     { id: nanoid(), task: 'Pick up groceries', completed: false },
     {
       id: nanoid(),
-      task: 'Complete Todo App on Frontend Mentor',
+      task: 'Complete Todo App',
       completed: false,
     },
   ],
-  filter: TodoFilter.all,
+  filter: TodoFilter.All,
 }
 
 const reducer = produce((state: GlobalStore, action: Action): void => {
@@ -82,7 +74,7 @@ const DispatchContext = createContext<Dispatch<Action>>(() => {})
 export const useStore = () => use(StoreContext)
 export const useDispatch = () => use(DispatchContext)
 
-export const GlobalStore: FC<{ children?: ReactNode }> = ({ children }) => {
+export const GlobalStore = ({ children }: { children?: ReactNode }) => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE, (initState) => {
     try {
       const savedState = window.localStorage.getItem('global-store')

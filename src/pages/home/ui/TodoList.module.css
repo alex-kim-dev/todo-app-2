@@ -47,8 +47,8 @@
   transition: background-color 120ms;
 }
 
-.checkbox:checked ~ .checkboxCover {
-  background-color: transparent;
+.check {
+  translate: 1px 1px;
 }
 
 .checkboxWrapper:hover .checkboxCover {
@@ -57,6 +57,17 @@
 
 .task {
   translate: 0 2px;
+}
+
+.item:has(:checked) {
+  .checkboxCover {
+    background-color: transparent;
+  }
+
+  .task {
+    color: var(--text-secondary);
+    text-decoration: line-through;
+  }
 }
 
 .delete {

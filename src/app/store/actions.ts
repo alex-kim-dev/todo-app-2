@@ -7,9 +7,9 @@ export interface Todo {
 }
 
 export enum TodoFilter {
-  all = 'all',
-  active = 'active',
-  completed = 'completed',
+  All = 'ALL',
+  Active = 'ACTIVE',
+  Completed = 'COMPLETED',
 }
 
 export enum ActionType {

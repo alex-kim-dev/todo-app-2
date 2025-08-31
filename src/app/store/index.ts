@@ -2,7 +2,7 @@ export { useStore, useDispatch, GlobalStore } from './store'
 export {
   type ID,
   type Todo,
-  type TodoFilter,
+  TodoFilter,
   addTodo,
   setTodoCompletion,
   deleteTodo,
