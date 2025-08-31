@@ -1,5 +1,5 @@
-@custom-media --sm-up (width >= 450px);
-@custom-media --sm-down (width < 450px);
+@custom-media --sm-up (width >= 576px);
+@custom-media --sm-down (width < 576px);
 @custom-media --md-up (width >= 768px);
 @custom-media --md-down (width < 768px);
 @custom-media --lg-up (width >= 1024px);

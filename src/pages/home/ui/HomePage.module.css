@@ -16,17 +16,12 @@ body[data-theme='dark'] .container {
 }
 
 .main {
-  margin-block-start: 32px;
+  margin-block-start: 40px;
 }
 
 @media (--lg-up) {
   .container {
-    padding-inline: 32px;
     background-position-x: center;
     background-size: 100% auto;
-  }
-
-  .main {
-    margin-block-start: 40px;
   }
 }
