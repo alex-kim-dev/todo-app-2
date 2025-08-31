@@ -1,3 +1,9 @@
 import { HomePage } from '~/pages/home'
 
-export const App = () => <HomePage />
+import { GlobalStore } from '../store'
+
+export const App = () => (
+  <GlobalStore>
+    <HomePage />
+  </GlobalStore>
+)
